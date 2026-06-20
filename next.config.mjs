@@ -2,7 +2,7 @@
 const nextConfig = {
   output: "export",
   basePath: "/vedant-deshpande-portfolio",
-  assetPrefix: "/vedant-deshpande-portfolio/",
+  assetPrefix: "/vedant-deshpande-portfolio",
   typescript: {
     ignoreBuildErrors: true,
   },
