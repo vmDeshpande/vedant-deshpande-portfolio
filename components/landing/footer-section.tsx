@@ -19,12 +19,9 @@ const footerLinks = {
   ],
   Resources: [
     { name: "Contact", href: "mailto:vedantmilinddeshpande@gmail.com" },
-    { name: "Blog", href: "#" },
-    { name: "Archive", href: "#" },
-  ],
-  Legal: [
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
+    { name: "AI Agent Docs", href: "https://vmdeshpande.github.io/ai-automation-platform-website/docs" },
+    { name: "Arcon Docs", href: "https://github.com/vmDeshpande/Arcon/tree/main/docs" },
+    { name: "NexoraVM Docs", href: "https://github.com/vmDeshpande/NexoraVM/tree/main/docs" },
   ],
 };
 
@@ -149,11 +146,6 @@ export function FooterSection() {
                         className="text-sm text-white/40 hover:text-white transition-colors inline-flex items-center gap-2"
                       >
                         {link.name}
-                        {"badge" in link && link.badge && (
-                          <span className="text-xs px-2 py-0.5 bg-white text-black rounded-full">
-                            {link.badge}
-                          </span>
-                        )}
                       </a>
                     </li>
                   ))}

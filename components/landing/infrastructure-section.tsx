@@ -4,40 +4,22 @@ import { useEffect, useState, useRef } from "react";
 
 const projects = [
   {
-    name: "Digital E-Gram Panchayat",
-    tags: ["React", "Node.js", "MongoDB"],
-    status: "Active",
-    github: "https://github.com/vmDeshpande/Digital-E-Gram-Panchayat",
+    name: "OwnStream",
+    tags: ["Kotlin", "Jetpack Compose", "SQLite", "Local-first"],
+    status: "MVP / Alpha",
+    github: "https://github.com/vmDeshpande/OwnStream",
   },
   {
-    name: "JOBIFY",
-    tags: ["React", "Node.js", "MongoDB"],
-    status: "Active",
-    github: "https://github.com/vmDeshpande/JOBIFY",
+    name: "PersonaOS",
+    tags: ["TypeScript", "Next.js", "Agents", "PostgreSQL"],
+    status: "Early Development",
+    github: "https://github.com/vmDeshpande/PersonaOS",
   },
   {
-    name: "Harmful URL Detector",
-    tags: ["Python", "Machine Learning", "Flask"],
-    status: "Active",
-    github: "https://github.com/vmDeshpande/HarmfulURLDetector",
-  },
-  {
-    name: "Trading Journal App",
-    tags: ["React", "Node.js", "MongoDB"],
-    status: "Active",
-    github: "https://github.com/vmDeshpande/trading-journal-app",
-  },
-  {
-    name: "Secure & Share Government Documents",
-    tags: ["Node.js", "MongoDB", "Authentication"],
-    status: "Active",
-    github: "https://github.com/vmDeshpande/Secure-and-Share-Government-Documents",
-  },
-  {
-    name: "EV Charging Station Finder",
-    tags: ["JavaScript", "Leaflet", "Maps"],
-    status: "Active",
-    github: "https://github.com/vmDeshpande/ev-charging-station-finder",
+    name: "Pulse",
+    tags: ["Next.js", "React", "Three.js", "TypeScript"],
+    status: "Early Development",
+    github: "https://github.com/vmDeshpande/Pulse",
   },
 ];
 
@@ -120,8 +102,8 @@ export function InfrastructureSection() {
                   isVisible ? "opacity-100" : "opacity-0"
                 }`}
               >
-                6 real-world projects spanning full-stack development, machine
-                learning, real-time systems, and open-source contributions.
+                Selected work across local-first software, AI systems, 3D interfaces,
+                and full-stack engineering.
               </p>
             </div>
           </div>
@@ -197,13 +179,13 @@ export function InfrastructureSection() {
             <div className="relative z-10">
               <div className="flex items-baseline gap-2 mb-4">
                 <span className="text-8xl lg:text-[10rem] font-display leading-none">
-                  6
+                  3
                 </span>
                 <span className="text-2xl text-muted-foreground">projects</span>
               </div>
               <p className="text-muted-foreground max-w-md">
-                Diverse projects across AI, web, mobile, and backend development
-                using modern tech stacks.
+                Supporting projects that extend the same interest in useful, carefully
+                structured software.
               </p>
             </div>
           </div>
@@ -217,7 +199,7 @@ export function InfrastructureSection() {
                   : "opacity-0 translate-y-8"
               }`}
             >
-              <span className="text-5xl lg:text-6xl font-display">Active</span>
+              <span className="text-5xl lg:text-6xl font-display">Selected</span>
               <span className="block text-sm text-muted-foreground mt-2">
                 Current Status
               </span>
@@ -230,9 +212,9 @@ export function InfrastructureSection() {
                   : "opacity-0 translate-y-8"
               }`}
             >
-              <span className="text-5xl lg:text-6xl font-display">Live</span>
+              <span className="text-5xl lg:text-6xl font-display">Current</span>
               <span className="block text-sm text-muted-foreground mt-2">
-                In Production
+                Supporting Work
               </span>
             </div>
           </div>
@@ -240,7 +222,7 @@ export function InfrastructureSection() {
 
         {/* Project list */}
         <div
-          className={`mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 transition-all duration-1000 delay-300 ${
+            className={`mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 transition-all duration-1000 delay-300 ${
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         >

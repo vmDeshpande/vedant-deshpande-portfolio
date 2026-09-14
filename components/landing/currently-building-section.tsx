@@ -18,13 +18,10 @@ export function OpenSourceSection() {
     return () => observer.disconnect();
   }, []);
 
-  const openSourceFocus = [
-    "AI Agent Orchestration",
-    "Workflow Automation",
-    "MCP Integrations",
-    "LLM Integration Patterns",
-    "Developer Tools",
-    "Community Contributions"
+  const projects = [
+    { name: "AI Agent Automation", status: "Active Development", href: "https://github.com/vmDeshpande/ai-agent-automation" },
+    { name: "Arcon", status: "Experimental", href: "https://github.com/vmDeshpande/Arcon" },
+    { name: "NexoraVM", status: "Active Development", href: "https://github.com/vmDeshpande/NexoraVM" },
   ];
 
   return (
@@ -40,21 +37,24 @@ export function OpenSourceSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}>
             <span className="w-12 h-px bg-foreground/20" />
-            Open Source
+            Currently Building
           </span>
 
           <h3 className={`text-4xl md:text-5xl font-display tracking-tight transition-all duration-1000 delay-100 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}>
-            Focus Areas
+            Three systems in motion
           </h3>
         </div>
 
         {/* Items Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-4">
-          {openSourceFocus.map((item, index) => (
-            <div
-              key={item}
+          {projects.map((project, index) => (
+            <a
+              key={project.name}
+              href={project.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`group p-6 lg:p-8 border border-foreground/10 bg-foreground/[0.02] hover:bg-foreground/[0.05] hover:border-foreground/20 transition-all duration-300 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
@@ -62,11 +62,14 @@ export function OpenSourceSection() {
             >
               <div className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#eca8d6] mt-2 flex-shrink-0 group-hover:scale-150 transition-transform" />
-                <p className="text-sm lg:text-base text-muted-foreground group-hover:text-foreground transition-colors leading-relaxed">
-                  {item}
-                </p>
+                <div>
+                  <p className="text-sm lg:text-base text-foreground group-hover:text-foreground transition-colors leading-relaxed">
+                    {project.name}
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-2 font-mono">{project.status}</p>
+                </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 

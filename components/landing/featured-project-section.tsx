@@ -21,18 +21,42 @@ export function FeaturedProjectSection() {
   const technologies = [
     "AI Agents",
     "Orchestration",
-    "Workflows",
+    "Visual Workflows",
+    "Semantic Memory",
+    "Document RAG",
+    "Agent Teams",
     "MCP",
-    "Integrations",
+    "Workflow APIs",
+    "Observability",
     "Docker",
-    "REST APIs",
-    "Open Source"
+    "Self-hosted",
   ];
 
   const stats = [
-    { label: "GitHub Stars", value: "150+" },
-    { label: "Contributors", value: "30+" },
-    { label: "Forks", value: "75+" },
+    { label: "Execution model", value: "Inspectable" },
+    { label: "Deployment", value: "Self-hosted" },
+    { label: "Project status", value: "Active" },
+  ];
+
+  const flagshipProjects = [
+    {
+      name: "Arcon",
+      positioning: "A local-first cognitive architecture for a persistent digital companion.",
+      summary: "Long-term memory, personality, emotional state, experience tracking, reflection, and structured cognition across a TypeScript/Node.js runtime and Python inference service.",
+      technologies: ["TypeScript", "Node.js", "Python", "SQLite", "Qwen/Qwen3-4B", "LoRA"],
+      status: "Experimental / Active Development",
+      github: "https://github.com/vmDeshpande/Arcon",
+      docs: "https://github.com/vmDeshpande/Arcon/tree/main/docs",
+    },
+    {
+      name: "NexoraVM",
+      positioning: "A Windows-first desktop virtualization and AI workspace.",
+      summary: "Typed VM definitions, persistent configuration, runtime discovery, deterministic QEMU command construction, and controlled process management. WHPX and the AI workspace remain roadmap items.",
+      technologies: ["Tauri v2", "React", "TypeScript", "Rust", "QEMU"],
+      status: "Active Early Development",
+      github: "https://github.com/vmDeshpande/NexoraVM",
+      docs: "https://github.com/vmDeshpande/NexoraVM/tree/main/docs",
+    },
   ];
 
   return (
@@ -59,15 +83,15 @@ export function FeaturedProjectSection() {
           <h2 className={`text-5xl md:text-6xl lg:text-7xl font-display tracking-tight leading-tight transition-all duration-1000 delay-100 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}>
-            AI Agent Workflow
+            AI Agent Automation
             <br />
-            <span className="text-muted-foreground">Automation Platform</span>
+            <span className="text-muted-foreground">Workflow Platform</span>
           </h2>
 
           <p className={`mt-8 text-xl text-muted-foreground leading-relaxed max-w-2xl transition-all duration-1000 delay-200 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}>
-            An open-source platform for designing, building, and orchestrating AI-powered workflows. Features agent orchestration, workflow automation, MCP integrations, scheduling, observability dashboards, and comprehensive developer tooling.
+            An AI-native workflow automation and orchestration platform for AI agents. Build, run, inspect, replay, and expose self-hosted workflows with memory, document RAG, agent teams, MCP, integrations, APIs, and execution observability.
           </p>
         </div>
 
@@ -134,13 +158,41 @@ export function FeaturedProjectSection() {
             <div className="border-2 border-[#eca8d6]/50 bg-[#eca8d6]/5 p-6 rounded-lg">
               <div className="flex items-center gap-3 mb-3">
                 <span className="w-2 h-2 rounded-full bg-[#eca8d6] animate-pulse" />
-                <span className="text-sm font-mono text-[#eca8d6]">ACTIVELY MAINTAINED</span>
+                <span className="text-sm font-mono text-[#eca8d6]">ACTIVE DEVELOPMENT</span>
               </div>
               <p className="text-xs text-muted-foreground">
-                Continuous development and community contributions
+                Open-source development with Docker deployment and multiple model providers
               </p>
             </div>
           </div>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-6">
+          {flagshipProjects.map((project) => (
+            <article key={project.name} className="border border-foreground/10 bg-foreground/[0.02] p-8 lg:p-10">
+              <div className="flex items-center justify-between gap-4 mb-6">
+                <h3 className="text-3xl font-display">{project.name}</h3>
+                <span className="text-xs font-mono text-[#eca8d6] text-right">{project.status}</span>
+              </div>
+              <p className="text-lg text-foreground mb-3">{project.positioning}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6">{project.summary}</p>
+              <div className="flex flex-wrap gap-2 mb-8">
+                {project.technologies.map((technology) => (
+                  <span key={technology} className="px-3 py-1 rounded bg-foreground/5 text-foreground/70 text-xs font-mono">
+                    {technology}
+                  </span>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-6 text-sm">
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-[#eca8d6] hover:text-[#f3b8df] transition-colors">
+                  GitHub →
+                </a>
+                <a href={project.docs} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Documentation →
+                </a>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

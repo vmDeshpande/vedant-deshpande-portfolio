@@ -20,12 +20,12 @@ export function FeaturedAchievementsSection() {
   }, []);
 
   const achievements = [
-    { metric: "150+", label: "GitHub Stars", highlight: true },
-    { metric: "30+", label: "Project Contributors" },
-    { metric: "75+", label: "Repository Forks" },
-    { metric: "6", label: "Real-World Projects" },
-    { metric: "Open Source", label: "Maintainer Status" },
-    { metric: "100%", label: "Community Driven" },
+    { metric: "AI-native", label: "Workflow automation", highlight: true },
+    { metric: "Local-first", label: "AI and developer systems" },
+    { metric: "Windows-first", label: "Desktop virtualization" },
+    { metric: "Typed", label: "Architecture and boundaries" },
+    { metric: "Open source", label: "Public engineering work" },
+    { metric: "Active", label: "Experimental systems in progress" },
   ];
 
   return (

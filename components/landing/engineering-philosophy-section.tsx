@@ -21,20 +21,20 @@ export function EngineeringPhilosophySection() {
 
   const principles = [
     {
-      title: "Clean Code",
-      description: "Readable, maintainable code that others can understand and extend"
+      title: "Local-first",
+      description: "Keep important data and capabilities close to the user when the system allows it"
     },
     {
-      title: "System Design",
-      description: "Thoughtful architecture that scales with user needs"
+      title: "Typed boundaries",
+      description: "Use explicit contracts between interfaces, runtimes, persistence, and native operations"
     },
     {
-      title: "Open Source",
-      description: "Building in public, contributing back, fostering communities"
+      title: "Explainable systems",
+      description: "Prefer observable, auditable behavior over opaque automation"
     },
     {
-      title: "User First",
-      description: "Solutions designed around real user problems"
+      title: "Open source",
+      description: "Build in public and contribute tools that other developers can inspect and extend"
     },
   ];
 

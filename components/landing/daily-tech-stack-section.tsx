@@ -21,20 +21,20 @@ export function DailyTechStackSection() {
 
   const techCategories = [
     {
-      category: "Frontend",
-      techs: ["React", "Next.js", "TypeScript", "Tailwind CSS"]
+      category: "AI & Intelligent Systems",
+      techs: ["LLMs", "Agents", "RAG", "MCP", "LoRA", "Local Inference"]
     },
     {
-      category: "Backend",
-      techs: ["Node.js", "Python", "FastAPI", "PostgreSQL"]
+      category: "Systems & Infrastructure",
+      techs: ["Rust", "QEMU", "Tauri", "Docker", "Process Management"]
     },
     {
-      category: "AI/ML",
-      techs: ["LLMs", "LangChain", "Vector DB", "Prompt Engineering"]
+      category: "Full Stack",
+      techs: ["React", "Next.js", "TypeScript", "Node.js", "Express"]
     },
     {
-      category: "DevOps",
-      techs: ["Docker", "Git", "CI/CD", "Cloud Deployment"]
+      category: "Data",
+      techs: ["MongoDB", "SQLite", "Semantic Retrieval"]
     },
   ];
 

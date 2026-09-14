@@ -21,8 +21,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Vedant Deshpande - Full Stack & AI Engineer',
-  description: 'Full Stack Engineer passionate about AI, Automation, and building scalable platforms. Portfolio showcasing projects in AI agents, distributed systems, and modern web development.',
+  title: 'Vedant Deshpande - AI Systems & Infrastructure Engineer',
+  description: 'Portfolio of Vedant Deshpande, building AI agents, local-first systems, developer tools, virtualization software, and full-stack open-source projects.',
 }
 
 export default function RootLayout({
